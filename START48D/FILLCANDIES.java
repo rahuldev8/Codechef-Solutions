@@ -21,7 +21,7 @@ class Codechef
                 {
                     System.out.println((tot_candy)/(pockets*poc_cap));
                 }
-            }
+            } 
             
         } catch(Exception e) {
         } finally {
