@@ -27,8 +27,12 @@ class Codechef
         //for each loop for reading arr's details
         for(int i : arr)
         {
-            //Checking for a pile, that chef can able to read it or not
-            res += ((i/mid) + (((i%mid) == 0) ? 0 : 1));
+            int x = i/mid; //for reading multiple of k books
+            int y = i%mid; //for calculaation minimum books
+            
+            res += x; //adding reading hours to result
+            
+            if(y!=0)res++;//for remaining extra books adding a single hour to result
         }
         //if res is less than or equal to given time, which means chef can able to read all the books return true, else false
         return res <= h;
@@ -72,7 +76,7 @@ class Codechef
 		    System.out.println(slow);
 		}
 		
-		//Time Complexity : o(log N)
+		//Time Complexity : o(M log N)
 		//Space Complexity : o(1)
 	}
 }
